@@ -6,6 +6,29 @@ import { Link, Route, Routes, Navigate} from 'react-router-dom';
 import { useState } from 'react';
 import Login from './componenets/login';
 import Signup from './componenets/signUp';
+import { getAuth } from "firebase/auth";
+import { initializeApp } from "firebase/app";
+
+
+// Import the functions you need from the SDKs you need
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyC0l6yfikUJPrynpP248mGk1aS6VFl6-Qw",
+  authDomain: "fir-auth-26bc0.firebaseapp.com",
+  projectId: "fir-auth-26bc0",
+  storageBucket: "fir-auth-26bc0.appspot.com",
+  messagingSenderId: "847004981213",
+  appId: "1:847004981213:web:3f1c041b84a2229103c834"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// Initialize Firebase Authentication and get a reference to the service
+const auth = getAuth(app);
 
 function App() {
 
